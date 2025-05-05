@@ -5,7 +5,6 @@ import { FaCalendarAlt, FaYoutube, FaChalkboardTeacher, FaRegClock, FaRegCalenda
 const EventsSection = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
 
-  // Мероприятия
   const events = {
     upcoming: [
       {
@@ -59,7 +58,6 @@ const EventsSection = () => {
   return (
     <div className="bg-gray-50 py-16">
       <div className="container mx-auto px-4">
-        {/* Заголовок */}
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,8 +67,6 @@ const EventsSection = () => {
         >
           <span className="text-blue-600">Мероприятия</span> и трансляции
         </motion.h2>
-
-        {/* Две вкладки: Трансляции и Расписание */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex bg-white rounded-lg shadow p-1">
             <button
@@ -87,8 +83,6 @@ const EventsSection = () => {
             </button>
           </div>
         </div>
-
-        {/* Контент вкладок */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           {activeTab === 'upcoming' ? (
             <div className="p-6">
