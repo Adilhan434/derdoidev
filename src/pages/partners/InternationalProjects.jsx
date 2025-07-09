@@ -64,7 +64,7 @@ const InternationalProjects = () => {
             impact: "very-high",
             progress: 65,
             tags: ["блокчейн", "торговля", "МСБ"],
-            image: "/project-images/global-trade.jpg"
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/WTO_members_and_observers.svg/330px-WTO_members_and_observers.svg.png"
           },
           {
             id: 2,
@@ -88,7 +88,7 @@ const InternationalProjects = () => {
             impact: "high",
             progress: 100,
             tags: ["экология", "умный город", "энергетика"],
-            image: "/project-images/green-tech.jpg"
+            image: "https://green-city.su/wp-content/uploads/2023/06/cropped-cropped-p1.jpg"
           },
           {
             id: 3,
@@ -112,7 +112,7 @@ const InternationalProjects = () => {
             impact: "high",
             progress: 30,
             tags: ["образование", "ИИ", "VR"],
-            image: "/project-images/digital-edu.jpg"
+            image: "https://static.tildacdn.com/tild3731-3062-4130-a133-656266323633/0x0.jpg"
           },
           {
             id: 4,
@@ -132,7 +132,7 @@ const InternationalProjects = () => {
             impact: "very-high",
             progress: 0,
             tags: ["медицина", "биотех", "телемедицина"],
-            image: "/project-images/health-tech.jpg"
+            image: "https://st3.depositphotos.com/1008648/19275/i/450/depositphotos_192752770-stock-photo-doctor-using-digital-medical-futuristic.jpg"
           },
           {
             id: 5,
@@ -155,7 +155,7 @@ const InternationalProjects = () => {
             impact: "medium",
             progress: 45,
             tags: ["транспорт", "логистика", "ИИ"],
-            image: "/project-images/smart-transport.jpg"
+            image: "https://codd15.ru/sites/default/files/styles/max_650x650/public/2024-02/%D0%B8%D1%82%D1%81.jpg?itok=CV_fxXuU"
           },
           {
             id: 6,
@@ -179,7 +179,7 @@ const InternationalProjects = () => {
             impact: "high",
             progress: 100,
             tags: ["кибербезопасность", "IT", "защита данных"],
-            image: "/project-images/cyber-security.jpg"
+            image: "https://www.kickidler.com/assets/image-cache/images/tickets/11111.56a72ded.jpg"
           }
         ];
         

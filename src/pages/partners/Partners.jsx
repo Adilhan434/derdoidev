@@ -5,38 +5,38 @@ import { useState } from 'react';
 const allPartners = [
   { 
     id: 1, 
-    name: 'Партнер 1', 
-    logo: '/logos/partner1.png', 
+    name: 'ТехноКорп', 
+    logo: 'https://habrastorage.org/getpro/moikrug/uploads/company/100/009/419/7/logo/medium_16fd90be982ab239d04b81b17c0cccb4.png', 
     category: 'Текущие партнеры',
     description: 'Один из ключевых партнеров DORDOI в сфере торговли и логистики',
-    website: 'https://partner1.com',
+    website: 'https://xn--e1akiebggk2a.xn--p1ai/',
     contact: 'info@partner1.com',
     since: '2015'
   },
   { 
     id: 2, 
-    name: 'Партнер 2', 
-    logo: '/logos/partner2.png', 
+    name: 'ФинТех Альянс', 
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3nH1F8qOgKki6wZy-Fims70VMkfCV_BR47Q&s', 
     category: 'Текущие партнеры',
     description: 'Стратегический партнер в области международной торговли',
-    website: 'https://partner2.org',
+    website: 'https://www.facebook.com/FinTechAllianceOfficial',
     contact: 'contact@partner2.org',
     since: '2018'
   },
   { 
     id: 3, 
     name: 'Международный партнер 1', 
-    logo: '/logos/intl1.png', 
+    logo: 'https://static.tildacdn.com/tild3731-3062-4130-a133-656266323633/0x0.jpg', 
     category: 'Международные проекты',
     description: 'Международная организация, сотрудничающая с DORDOI в рамках глобальных инициатив',
-    website: 'https://international-partner.com',
+    website: 'https://digital-edu.example',
     contact: 'cooperation@intl-partner.com',
     since: '2020'
   },
   { 
     id: 4, 
     name: 'Партнерство 1', 
-    logo: '/logos/coop1.png', 
+    logo: 'https://st3.depositphotos.com/1008648/19275/i/450/depositphotos_192752770-stock-photo-doctor-using-digital-medical-futuristic.jpg', 
     category: 'Партнерство и сотрудничество',
     description: 'Долгосрочное партнерство в сфере образовательных программ',
     website: 'https://cooperation-example.org',
@@ -45,8 +45,8 @@ const allPartners = [
   },
   { 
     id: 5, 
-    name: 'Организация 1', 
-    logo: '/logos/letter1.png', 
+    name: 'Министерство экономики РФ', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/1/1b/Min-econom-develop-russia-emblem.svg', 
     category: 'Благодарственные письма',
     description: 'Организация, выразившая благодарность за сотрудничество с DORDOI',
     website: 'https://thankyou-org.com',

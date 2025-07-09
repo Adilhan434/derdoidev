@@ -32,11 +32,11 @@ const CurrentPartners = () => {
           {
             id: 1,
             name: "ТехноКорп",
-            logo: "/logos/technocorp.png",
+            logo: "https://habrastorage.org/getpro/moikrug/uploads/company/100/009/419/7/logo/medium_16fd90be982ab239d04b81b17c0cccb4.png",
             description: "Стратегический партнер в области инноваций и цифровых технологий",
             since: 2023,
             projects: "15 совместных проектов",
-            website: "https://technocorp.example",
+            website: "https://xn--e1akiebggk2a.xn--p1ai/",
             benefits: [
               "Эксклюзивные условия для клиентов",
               "Совместные R&D центры",
@@ -46,16 +46,16 @@ const CurrentPartners = () => {
               growth: "+42%",
               satisfaction: "98%"
             },
-            accentColor: "from-blue-600 to-indigo-600"
+            accentColor: "from-blue-600 to-dark-900"
           },
           {
             id: 2,
             name: "ГринЭко",
-            logo: "/logos/greeneco.png",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6aRCQ4bE9f5rSW-qzM8TDjAh4mXWC-huHsg&s",
             description: "Лидер в области устойчивого развития и экологических решений",
             since: 2022,
             projects: "8 экологических инициатив",
-            website: "https://greeneco.example",
+            website: "https://www.facebook.com/grineco",
             benefits: [
               "Совместные исследования",
               "Зеленые технологии",
@@ -65,16 +65,16 @@ const CurrentPartners = () => {
               growth: "+35%",
               satisfaction: "95%"
             },
-            accentColor: "from-emerald-500 to-teal-600"
+            accentColor: "from-emerald-600 to-emerald-600"
           },
           {
             id: 3,
             name: "ФинТех Альянс",
-            logo: "/logos/fintech-alliance.png",
+            logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3nH1F8qOgKki6wZy-Fims70VMkfCV_BR47Q&s",
             description: "Инновации в финансовых технологиях и цифровизации банкинга",
             since: 2024,
             projects: "5 цифровых платформ",
-            website: "https://fintech-alliance.example",
+            website: "https://www.facebook.com/FinTechAllianceOfficial",
             benefits: [
               "Доступ к инновационным решениям",
               "Обучение специалистов",
@@ -84,16 +84,16 @@ const CurrentPartners = () => {
               growth: "+58%",
               satisfaction: "97%"
             },
-            accentColor: "from-purple-600 to-fuchsia-500"
+            accentColor: "from-purple-600 to-white-500"
           },
           {
             id: 4,
             name: "БиоМед",
-            logo: "/logos/biomed.png",
+            logo: "https://ruohonjuuri.com/cdn/shop/collections/big81_685a6bed-5c00-4210-b951-02610e4d2f03_1200x630.png?v=1702293017",
             description: "Передовые медицинские технологии и клинические исследования",
             since: 2021,
             projects: "12 разработок медоборудования",
-            website: "https://biomed.example",
+            website: "https://ruohonjuuri.com/collections/biomed",
             benefits: [
               "Совместные лаборатории",
               "Клинические испытания",
@@ -103,16 +103,16 @@ const CurrentPartners = () => {
               growth: "+29%",
               satisfaction: "99%"
             },
-            accentColor: "from-rose-500 to-pink-600"
+            accentColor: "from-rose-500 to-white-600"
           },
           {
             id: 5,
-            name: "КосмосСтрой",
-            logo: "/logos/cosmostroy.png",
+            name: "КомосСтрой",
+            logo: "https://static.tildacdn.com/tild3939-3464-4039-a630-323034373338/photo.jpg",
             description: "Крупнейшие инфраструктурные проекты и умные города",
             since: 2023,
             projects: "7 мега-объектов",
-            website: "https://cosmostroy.example",
+            website: "https://kosmos-stroy.ru",
             benefits: [
               "Технологическое партнерство",
               "Инженерные решения",
@@ -122,16 +122,16 @@ const CurrentPartners = () => {
               growth: "+47%",
               satisfaction: "96%"
             },
-            accentColor: "from-amber-500 to-orange-500"
+            accentColor: "from-amber-500 to-dark-500"
           },
           {
             id: 6,
             name: "АгроТех Групп",
-            logo: "/logos/agrotech-group.png",
+            logo: "https://images.deal.by/456554329_456554329.ico",
             description: "Инновации в сельском хозяйстве и пищевой промышленности",
             since: 2020,
             projects: "20 умных ферм",
-            website: "https://agrotech.example",
+            website: "https://agrotehgrupp.by",
             benefits: [
               "Пилотные программы",
               "Агроаналитика",
@@ -141,16 +141,16 @@ const CurrentPartners = () => {
               growth: "+63%",
               satisfaction: "94%"
             },
-            accentColor: "from-lime-500 to-green-500"
+            accentColor: "from-lime-500 to-white-500"
           },
           {
             id: 7,
             name: "КвантТех",
-            logo: "/logos/quanttech.png",
+            logo: "https://kvt.su/images/cms/data/marketing-support/logos/logo_main.png",
             description: "Квантовые вычисления и искусственный интеллект",
             since: 2023,
             projects: "4 исследовательских центра",
-            website: "https://quanttech.example",
+            website: "https://kapitsa.center/directions/kvantteh",
             benefits: [
               "Доступ к суперкомпьютерам",
               "Совместные алгоритмы",
@@ -165,11 +165,11 @@ const CurrentPartners = () => {
           {
             id: 8,
             name: "ОкеанЭнерджи",
-            logo: "/logos/oceanenergy.png",
+            logo: "https://cdn.freebiesupply.com/logos/large/2x/ocean-energy-logo-svg-vector.svg",
             description: "Возобновляемая энергия морских течений и волн",
             since: 2022,
             projects: "3 морские станции",
-            website: "https://oceanenergy.example",
+            website: "https://www.godaddy.com/forsale/oceanenergy.com",
             benefits: [
               "Зеленая энергия",
               "Технологии будущего",
@@ -179,7 +179,7 @@ const CurrentPartners = () => {
               growth: "+39%",
               satisfaction: "93%"
             },
-            accentColor: "from-cyan-500 to-blue-500"
+            accentColor: "from-cyan-500 to-black-500"
           }
         ];
         
