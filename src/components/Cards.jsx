@@ -119,13 +119,13 @@ const Cards = () => {
           </div>
         ) : (
           <div className="desktop-marquee-inner">
-            {/* Дублируем карточки для бесшовной анимации */}
             {[...cardsData, ...cardsData].map((card, index) => (
-              <Card 
-                key={`desktop-${card.id}-${index}`} 
-                card={card} 
-                isMobile={false} 
-              />
+              <div 
+                key={`desktop-${card.id}-${index}`}
+                className="card-wrapper" // Новая обёртка
+              >
+                <Card card={card} isMobile={false} />
+              </div>
             ))}
           </div>
         )}
