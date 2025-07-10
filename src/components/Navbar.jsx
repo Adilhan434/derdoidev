@@ -31,10 +31,10 @@ const Navbar = () => {
       path: '/partners',
       icon: '🤝',
       subItems: [
-        { title: 'Текущие партнёры', path: '../pages/partners/CurrentPartners' },
-        { title: 'Международные проекты', path: '../pages/partners/InternationalProjects' },
-        { title: 'Партнёрство и сотрудничество', path: '../pages/partners/Cooperation' },
-        { title: 'Благодарственные письма', path: '../pages/partners/ThankLetters' },
+        { title: 'Текущие партнёры', path: '../partners/current' },
+        { title: 'Международные проекты', path: '../partners/international' },
+        { title: 'Партнёрство и сотрудничество', path: '../partners/cooperation' },
+        { title: 'Благодарственные письма', path: '../partners/letters' },
       ],
     },
     {
@@ -42,9 +42,9 @@ const Navbar = () => {
       path: '/news',
       icon: '📰',
       subItems: [
-        { title: 'Новости рынков', path: '../pages/news/News' },
-        { title: 'Пресс-релизы', path: '../pages/news/Press' },
-        { title: 'Архив', path: '../pages/news/Archive' },
+        { title: 'Новости рынков', path: '../news' },
+        { title: 'Пресс-релизы', path: '../news/press' },
+        { title: 'Архив', path: '../news/archive' },
       ],
     },
     {
@@ -72,9 +72,7 @@ const Navbar = () => {
       subItems: [
         { title: 'Центральный офис', path: '/contacts/office' },
         { title: 'Адреса рынков и ТЦ', path: '/contacts/addresses' },
-        { title: 'Телефоны и email', path: '/contacts/phones' },
-        { title: 'Онлайн-форма связи', path: '/contacts/form' },
-        { title: 'Карта проезда', path: '/contacts/map' },
+        { title: 'Телефоны и email', path: '/contacts/phones' }
       ],
     },
   ];
