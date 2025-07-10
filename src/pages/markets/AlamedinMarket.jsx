@@ -16,7 +16,7 @@ const AlamedinMarket = () => {
   const [selectedShop, setSelectedShop] = useState(null);
   
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen/home/adilhan);
   };
   
   // Данные для приложения

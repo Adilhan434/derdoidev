@@ -2,21 +2,14 @@ import {
   FaShoppingBag, FaFacebookF, FaInstagram, FaTwitter, FaYoutube, 
   FaMapMarkerAlt, FaPhone, FaClock 
 } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
-  const categories = [
-    { id: 'clothing', name: 'Одежда', icon: <FaShoppingBag /> },
-    { id: 'shoes', name: 'Обувь', icon: <FaShoppingBag /> },
-    { id: 'electronics', name: 'Электроника', icon: <FaShoppingBag /> },
-    { id: 'home', name: 'Товары для дома', icon: <FaShoppingBag /> },
-    { id: 'kids', name: 'Детские товары', icon: <FaShoppingBag /> },
-    { id: 'furniture', name: 'Мебель', icon: <FaShoppingBag /> },
-  ];
 
   return (
     <footer id='contacts' className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <div className="flex items-center mb-6">
               <div className="bg-blue-800 text-white w-10 h-10 rounded-full flex items-center justify-center mr-3">
@@ -46,29 +39,14 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Навигация</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Главная</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Товары</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Магазины</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Схема рынка</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">О нас</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Контакты</a></li>
+              <li><Link to="header" smooth={true} duration={500} className="text-gray-400 hover:text-white transition cursor-pointer">Главная</Link></li>
+              <li><Link to="tovars" smooth={true} duration={500} className="text-gray-400 hover:text-white transition cursor-pointer">Товары</Link></li>
+              <li><Link to="shops" smooth={true} duration={500} className="text-gray-400 hover:text-white transition cursor-pointer">Магазины</Link></li>
+              <li><Link to="map" smooth={true} duration={500} className="text-gray-400 hover:text-white transition cursor-pointer">Схема рынка</Link></li>
+              <li><Link to="aboutus" smooth={true} duration={500} className="text-gray-400 hover:text-white transition cursor-pointer">О нас</Link></li>
+              <li><Link to="contacts" smooth={true} duration={500} className="text-gray-400 hover:text-white transition cursor-pointer">Контакты</Link></li>
             </ul>
           </div>
-          
-          <div>
-            <h4 className="text-lg font-bold mb-6">Категории</h4>
-            <ul className="space-y-3">
-              {categories.map(category => (
-                <li key={category.id}>
-                  <a href="#" className="text-gray-400 hover:text-white transition flex items-center">
-                    <span className="mr-2">{category.icon}</span>
-                    {category.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
           <div>
             <h4 className="text-lg font-bold mb-6">Контакты</h4>
             <ul className="space-y-3 text-gray-400">

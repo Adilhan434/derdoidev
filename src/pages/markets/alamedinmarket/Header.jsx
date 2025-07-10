@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useRef } from 'react';
+import { Link } from 'react-scroll'
 import { FaShoppingBag, FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = ({ isMenuOpen, toggleMenu }) => {
@@ -32,7 +33,7 @@ const Header = ({ isMenuOpen, toggleMenu }) => {
   })
 
   return (
-    <header ref={headerRef} className="bg-white shadow-md top-0 z-50">
+    <header id='header' ref={headerRef} className="bg-white shadow-md top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div  ref={logoRef} className="flex items-center">
@@ -70,13 +71,12 @@ const Header = ({ isMenuOpen, toggleMenu }) => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t mt-2">
             <div className="flex flex-col space-y-3">
-              <a href="#" className="text-blue-800 font-medium">Главная</a>
-              <a href="#" className="text-gray-600 hover:text-blue-600 transition">Товары</a>
-              <a href="#" className="text-gray-600 hover:text-blue-600 transition">Магазины</a>
-              <a href="#" className="text-gray-600 hover:text-blue-600 transition">Схема рынка</a>
-              <a href="#" className="text-gray-600 hover:text-blue-600 transition">О нас</a>
-              <a href="#" className="text-gray-600 hover:text-blue-600 transition">Контакты</a>
-              
+              <Link to="hero" smooth={true} className="text-gray-400 hover:text-white transition cursor-pointer">Главная</Link><Link to="tovars" smooth={true} className="text-gray-400 hover:text-white transition cursor-pointer">Товары</Link>
+              <Link to="shops" smooth={true} className="text-gray-400 hover:text-white transition cursor-pointer">Магазины</Link>
+              <Link to="map" smooth={true} className="text-gray-400 hover:text-white transition cursor-pointer">Схема рынка</Link>
+              <Link to="aboutus" smooth={true} className="text-gray-400 hover:text-white transition cursor-pointer">О нас</Link>
+              <Link to="contacts" smooth={true} className="text-gray-400 hover:text-white transition cursor-pointer">Контакты</Link>
+
             </div>
           </nav>
         )}
