@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Tooltip } from 'react-tooltip';
 
 const CurrentPartners = () => {
   const [partners, setPartners] = useState([]);
@@ -288,302 +287,299 @@ const CurrentPartners = () => {
     );
   }
 
-  return (
-    <div className="relative bg-gradient-to-br from-blue-900/5 via-white to-blue-50 py-16 px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden">
-      {/* Анимированный фон с пузырьками */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-blue-100/20"
-            initial={{
-              x: Math.random() * 100 + 'vw',
-              y: Math.random() * 100 + 'vh',
-              width: Math.random() * 300 + 100 + 'px',
-              height: Math.random() * 300 + 100 + 'px',
-              opacity: 0.1
-            }}
-            animate={{
-              x: Math.random() * 100 + 'vw',
-              y: Math.random() * 100 + 'vh',
-              transition: {
-                duration: Math.random() * 20 + 10,
-                repeat: Infinity,
-                repeatType: 'reverse'
-              }
-            }}
-          />
-        ))}
-      </div>
-      
-      <div className="relative z-10 text-center mb-16">
-        <motion.h2 
-          className="text-5xl md:text-6xl font-extrabold mb-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-yellow-500 to-blue-600 animate-gradient-x">
-            Наши партнеры
-          </span>
-        </motion.h2>
-        
+  
+    return (
+  <div className="relative bg-gradient-to-br from-blue-900/5 via-white to-blue-50 py-16 px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden">
+    {/* Анимированный фон с пузырьками */}
+    <div className="absolute inset-0 overflow-hidden">
+      {[...Array(15)].map((_, i) => (
         <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: '40%' }}
-          transition={{ duration: 1 }}
-          className="h-1.5 bg-gradient-to-r from-blue-400 via-yellow-400 to-blue-400 rounded-full mx-auto mb-6"
+          key={i}
+          className="absolute rounded-full bg-blue-100/20"
+          initial={{
+            x: Math.random() * 100 + 'vw',
+            y: Math.random() * 100 + 'vh',
+            width: Math.random() * 300 + 100 + 'px',
+            height: Math.random() * 300 + 100 + 'px',
+            opacity: 0.1
+          }}
+          animate={{
+            x: Math.random() * 100 + 'vw',
+            y: Math.random() * 100 + 'vh',
+            transition: {
+              duration: Math.random() * 20 + 10,
+              repeat: Infinity,
+              repeatType: 'reverse'
+            }
+          }}
         />
-        
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-xl text-blue-800/90 max-w-3xl mx-auto"
-        >
-          Формируем будущее через стратегические альянсы с лидерами индустрии
-        </motion.p>
-      </div>
+      ))}
+    </div>
 
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {partners.slice(0, visiblePartners).map((partner) => (
-          <motion.div
-            key={partner.id}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}
-            whileHover={{ y: -10 }}
-            className="relative"
+    <div className="relative z-10 text-center mb-16">
+      <motion.h2 
+        className="text-5xl md:text-6xl font-extrabold mb-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-yellow-500 to-blue-600 animate-gradient-x">
+          Наши партнеры
+        </span>
+      </motion.h2>
+
+      <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: '40%' }}
+        transition={{ duration: 1 }}
+        className="h-1.5 bg-gradient-to-r from-blue-400 via-yellow-400 to-blue-400 rounded-full mx-auto mb-6"
+      />
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="text-xl text-blue-800/90 max-w-3xl mx-auto"
+      >
+        Формируем будущее через стратегические альянсы с лидерами индустрии
+      </motion.p>
+    </div>
+
+    <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {partners.slice(0, visiblePartners).map((partner) => (
+        <motion.div
+          key={partner.id}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, type: 'spring', stiffness: 100 }}
+          whileHover={{ y: -10 }}
+          className="relative"
+        >
+          <div 
+            className={`border-2 rounded-2xl p-6 h-full flex flex-col items-center transition-all duration-300 shadow-lg overflow-hidden
+              ${hoveredPartner === partner.id ? 'border-yellow-400 bg-gradient-to-b from-white to-yellow-50 shadow-xl' : 'border-blue-100/50 bg-white/80 backdrop-blur-sm'}
+              ${expandedPartner === partner.id ? '!bg-blue-50/80 !border-blue-300' : ''}
+            `}
+            onMouseEnter={() => setHoveredPartner(partner.id)}
+            onMouseLeave={() => setHoveredPartner(null)}
           >
-            <div 
-              className={`border-2 rounded-2xl p-6 h-full flex flex-col items-center transition-all duration-300 shadow-lg overflow-hidden
-                ${hoveredPartner === partner.id ? 'border-yellow-400 bg-gradient-to-b from-white to-yellow-50 shadow-xl' : 'border-blue-100/50 bg-white/80 backdrop-blur-sm'}
-                ${expandedPartner === partner.id ? '!bg-blue-50/80 !border-blue-300' : ''}
-              `}
-              onMouseEnter={() => setHoveredPartner(partner.id)}
-              onMouseLeave={() => setHoveredPartner(null)}
-            >
-              {/* Акцентная полоса */}
-              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${partner.accentColor}`}></div>
-              
-              <div className="relative mb-6">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => toggleExpandPartner(partner.id)}
-                  className="cursor-pointer"
-                >
-                  <div className={`bg-gradient-to-br ${partner.accentColor} bg-opacity-10 p-3 rounded-2xl shadow-inner`}>
-                    <img 
-                      src={partner.logo} 
-                      alt={partner.name} 
-                      className="h-20 w-20 object-contain"
-                      data-tooltip-id={`partner-${partner.id}`}
-                    />
-                  </div>
-                </motion.div>
-                <Tooltip 
-                  id={`partner-${partner.id}`} 
-                  place="top" 
-                  className="!bg-blue-600 !text-white !px-3 !py-2 !rounded-lg !text-sm"
-                >
-                  Нажмите для подробностей
-                </Tooltip>
+            {/* Акцентная полоса */}
+            <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${partner.accentColor}`}></div>
+
+            {/* Логотип + кастомный тултип */}
+            <div className="relative mb-6 group cursor-pointer" onClick={() => toggleExpandPartner(partner.id)}>
+              <div className={`bg-gradient-to-br ${partner.accentColor} bg-opacity-10 p-3 rounded-2xl shadow-inner`}>
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name} 
+                  className="h-20 w-20 object-contain"
+                />
               </div>
-              
-              <motion.h3 
-                className="text-2xl font-bold text-center text-blue-900 mb-2"
+
+              {/* Кастомный tooltip */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 text-sm text-white bg-blue-600 rounded-md shadow-md opacity-0 group-hover:opacity-100 pointer-events-none"
+              >
+                Нажмите для подробностей
+              </motion.div>
+            </div>
+
+            <motion.h3 
+              className="text-2xl font-bold text-center text-blue-900 mb-2"
+              whileHover={{ scale: 1.05 }}
+            >
+              {partner.name}
+            </motion.h3>
+
+            <motion.p 
+              className="text-blue-800/90 text-center mb-4"
+              whileHover={{ scale: 1.02 }}
+            >
+              {partner.description}
+            </motion.p>
+
+            <div className="flex justify-between w-full text-sm mb-4">
+              <motion.span 
+                className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium"
                 whileHover={{ scale: 1.05 }}
               >
-                {partner.name}
-              </motion.h3>
-              
-              <motion.p 
-                className="text-blue-800/90 text-center mb-4"
-                whileHover={{ scale: 1.02 }}
+                С {partner.since}
+              </motion.span>
+              <motion.span 
+                className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-medium"
+                whileHover={{ scale: 1.05 }}
               >
-                {partner.description}
-              </motion.p>
-              
-              <div className="flex justify-between w-full text-sm mb-4">
-                <motion.span 
-                  className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium"
-                  whileHover={{ scale: 1.05 }}
+                {partner.projects}
+              </motion.span>
+            </div>
+
+            <AnimatePresence>
+              {expandedPartner === partner.id && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  className="w-full overflow-hidden"
                 >
-                  С {partner.since}
-                </motion.span>
-                <motion.span 
-                  className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-medium"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {partner.projects}
-                </motion.span>
-              </div>
-              
-              <AnimatePresence>
-                {expandedPartner === partner.id && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                    className="w-full overflow-hidden"
-                  >
-                    <div className="pt-4 border-t border-blue-200/50">
-                      <h4 className="font-semibold text-blue-900 mb-2">Преимущества сотрудничества:</h4>
-                      <ul className="space-y-2 mb-4">
-                        {partner.benefits.map((benefit, index) => (
-                          <motion.li 
-                            key={index} 
-                            className="flex items-start"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                          >
-                            <span className={`text-transparent bg-clip-text bg-gradient-to-r ${partner.accentColor} mr-2`}>•</span>
-                            <span className="text-blue-800/90">{benefit}</span>
-                          </motion.li>
-                        ))}
-                      </ul>
-                      
-                      <div className="grid grid-cols-2 gap-2 mb-4">
-                        <motion.div 
-                          className="bg-blue-100/50 p-2 rounded-lg text-center backdrop-blur-sm"
-                          initial={{ scale: 0.9 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.2 }}
+                  <div className="pt-4 border-t border-blue-200/50">
+                    <h4 className="font-semibold text-blue-900 mb-2">Преимущества сотрудничества:</h4>
+                    <ul className="space-y-2 mb-4">
+                      {partner.benefits.map((benefit, index) => (
+                        <motion.li 
+                          key={index} 
+                          className="flex items-start"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.1 }}
                         >
-                          <div className="text-xs text-blue-600">Рост</div>
-                          <div className="text-lg font-bold text-blue-800">{partner.stats.growth}</div>
-                        </motion.div>
-                        <motion.div 
-                          className="bg-yellow-100/50 p-2 rounded-lg text-center backdrop-blur-sm"
-                          initial={{ scale: 0.9 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: 0.3 }}
-                        >
-                          <div className="text-xs text-yellow-600">Удовлетворенность</div>
-                          <div className="text-lg font-bold text-yellow-800">{partner.stats.satisfaction}</div>
-                        </motion.div>
-                      </div>
+                          <span className={`text-transparent bg-clip-text bg-gradient-to-r ${partner.accentColor} mr-2`}>•</span>
+                          <span className="text-blue-800/90">{benefit}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+
+                    <div className="grid grid-cols-2 gap-2 mb-4">
+                      <motion.div 
+                        className="bg-blue-100/50 p-2 rounded-lg text-center backdrop-blur-sm"
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: 0.2 }}
+                      >
+                        <div className="text-xs text-blue-600">Рост</div>
+                        <div className="text-lg font-bold text-blue-800">{partner.stats.growth}</div>
+                      </motion.div>
+                      <motion.div 
+                        className="bg-yellow-100/50 p-2 rounded-lg text-center backdrop-blur-sm"
+                        initial={{ scale: 0.9 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        <div className="text-xs text-yellow-600">Удовлетворенность</div>
+                        <div className="text-lg font-bold text-yellow-800">{partner.stats.satisfaction}</div>
+                      </motion.div>
                     </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <div className="mt-auto w-full">
+              <AnimatePresence>
+                {hoveredPartner === partner.id && expandedPartner !== partner.id && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="text-center"
+                  >
+                    <motion.a 
+                      href={partner.website} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`inline-block px-4 py-2 bg-gradient-to-r ${partner.accentColor} text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Посетить сайт
+                    </motion.a>
                   </motion.div>
                 )}
               </AnimatePresence>
-              
-              <div className="mt-auto w-full">
-                <AnimatePresence>
-                  {hoveredPartner === partner.id && expandedPartner !== partner.id && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      className="text-center"
-                    >
-                      <motion.a 
-                        href={partner.website} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className={`inline-block px-4 py-2 bg-gradient-to-r ${partner.accentColor} text-white rounded-lg font-medium shadow-md hover:shadow-lg transition-all`}
-                        whileHover={{ scale: 1.05, boxShadow: `0 8px 20px -5px rgba(var(--${partner.accentColor.split('-')[0]}-500), 0.4)` }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        Посетить сайт
-                      </motion.a>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
             </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {visiblePartners < partners.length && (
-        <motion.div 
-          className="text-center mt-16 relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          onHoverStart={() => setIsHoveringShowMore(true)}
-          onHoverEnd={() => setIsHoveringShowMore(false)}
-        >
-          <motion.button 
-            onClick={showMorePartners}
-            className="relative px-8 py-4 bg-gradient-to-r from-blue-600 to-yellow-500 text-white rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all overflow-hidden"
-            whileHover={{ 
-              scale: 1.05, 
-              boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.4)",
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="relative z-10">Показать еще ({partners.length - visiblePartners})</span>
-            
-            {/* Эффект частиц при наведении */}
-            <AnimatePresence>
-              {isHoveringShowMore && (
-                <>
-                  {[...Array(8)].map((_, i) => (
-                    <motion.span
-                      key={i}
-                      className="absolute rounded-full bg-white/20"
-                      initial={{
-                        x: Math.random() * 100 - 50 + '%',
-                        y: Math.random() * 100 - 50 + '%',
-                        width: Math.random() * 20 + 5 + 'px',
-                        height: Math.random() * 20 + 5 + 'px',
-                        opacity: 0
-                      }}
-                      animate={{
-                        x: Math.random() * 200 - 100 + '%',
-                        y: Math.random() * 200 - 100 + '%',
-                        opacity: [0, 0.7, 0],
-                        scale: [0, 1.5, 0],
-                        transition: {
-                          duration: 1.5,
-                          repeat: Infinity,
-                          repeatDelay: Math.random() * 2,
-                          delay: i * 0.1
-                        }
-                      }}
-                    />
-                  ))}
-                </>
-              )}
-            </AnimatePresence>
-          </motion.button>
+          </div>
         </motion.div>
-      )}
-      
-      {/* Декоративные элементы */}
-      <motion.div 
-        className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-blue-400/10 blur-xl"
-        animate={{
-          scale: [1, 1.1, 1],
-          opacity: [0.1, 0.15, 0.1]
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatType: 'reverse'
-        }}
-      />
-      
-      <motion.div 
-        className="absolute -top-10 -right-10 w-72 h-72 rounded-full bg-yellow-400/10 blur-xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.2, 0.1]
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          delay: 2
-        }}
-      />
+      ))}
     </div>
-  );
-};
+
+    {visiblePartners < partners.length && (
+      <motion.div 
+        className="text-center mt-16 relative z-10"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        onHoverStart={() => setIsHoveringShowMore(true)}
+        onHoverEnd={() => setIsHoveringShowMore(false)}
+      >
+        <motion.button 
+          onClick={showMorePartners}
+          className="relative px-8 py-4 bg-gradient-to-r from-blue-600 to-yellow-500 text-white rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all overflow-hidden"
+          whileHover={{ 
+            scale: 1.05, 
+            boxShadow: "0 10px 25px -5px rgba(59, 130, 246, 0.4)",
+          }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span className="relative z-10">Показать еще ({partners.length - visiblePartners})</span>
+
+          <AnimatePresence>
+            {isHoveringShowMore && (
+              <>
+                {[...Array(8)].map((_, i) => (
+                  <motion.span
+                    key={i}
+                    className="absolute rounded-full bg-white/20"
+                    initial={{
+                      x: Math.random() * 100 - 50 + '%',
+                      y: Math.random() * 100 - 50 + '%',
+                      width: Math.random() * 20 + 5 + 'px',
+                      height: Math.random() * 20 + 5 + 'px',
+                      opacity: 0
+                    }}
+                    animate={{
+                      x: Math.random() * 200 - 100 + '%',
+                      y: Math.random() * 200 - 100 + '%',
+                      opacity: [0, 0.7, 0],
+                      scale: [0, 1.5, 0],
+                      transition: {
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatDelay: Math.random() * 2,
+                        delay: i * 0.1
+                      }
+                    }}
+                  />
+                ))}
+              </>
+            )}
+          </AnimatePresence>
+        </motion.button>
+      </motion.div>
+    )}
+
+    {/* Декоративные элементы */}
+    <motion.div 
+      className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-blue-400/10 blur-xl"
+      animate={{
+        scale: [1, 1.1, 1],
+        opacity: [0.1, 0.15, 0.1]
+      }}
+      transition={{
+        duration: 8,
+        repeat: Infinity,
+        repeatType: 'reverse'
+      }}
+    />
+
+    <motion.div 
+      className="absolute -top-10 -right-10 w-72 h-72 rounded-full bg-yellow-400/10 blur-xl"
+      animate={{
+        scale: [1, 1.2, 1],
+        opacity: [0.1, 0.2, 0.1]
+      }}
+      transition={{
+        duration: 10,
+        repeat: Infinity,
+        repeatType: 'reverse',
+        delay: 2
+      }}
+    />
+  </div>
+);
+}
 
 export default CurrentPartners;

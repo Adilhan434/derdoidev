@@ -6,13 +6,12 @@ const Navbar = () => {
     { title: 'Главная', path: '/', icon: '🏠' },
     {
       title: 'О нас',
-      path: '/about',
       icon: 'ℹ️',
       subItems: [
+        { title: 'Организационная структура', path: '/about/structure' },
         { title: 'История ассоциации', path: '/about/history' },
         { title: 'Миссия и цели', path: '/about/mission' },
         { title: 'Руководство', path: '/about/leadership' },
-        { title: 'Организационная структура', path: '/about/structure' },
       ],
     },
     {
@@ -39,11 +38,11 @@ const Navbar = () => {
     },
     {
       title: 'Новости',
-      path: '/news',
+      // path: '/news',
       icon: '📰',
       subItems: [
-        { title: 'Новости рынков', path: '../news' },
-        { title: 'Пресс-релизы', path: '../news/press' },
+        // { title: 'Новости рынков', path: '../news' },
+        // { title: 'Пресс-релизы', path: '../news/press' },
         { title: 'Архив', path: '../news/archive' },
       ],
     },
